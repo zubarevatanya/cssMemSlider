@@ -19,9 +19,9 @@ body {
     flex-direction: row;
     justify-content: flex-end;
     gap: 10px;
-position: relative;
-height: 70px;
-top: -70px;
+    position: relative;
+    height: 70px;
+    z-index: 100;
 }
 
 .btn {
@@ -44,6 +44,10 @@ top: -70px;
 .text {
     text-align: left;
     color: white;
+    font-size: 2em;
+    width: 100%;
+    margin-top: -70px;
+    position: relative;
 }
 
 .container {
@@ -55,7 +59,6 @@ top: -70px;
 
 .mem,
 .text {
-    height: 50%;
     white-space: nowrap;
     transition: 0.8s;
     font-size: 0;
@@ -67,7 +70,6 @@ top: -70px;
     display: inline-block;
     white-space: normal;
     vertical-align: top;
-    height: 50%;
     width: 100%;
     background: none 50% no-repeat;
     background-size: cover;
@@ -90,16 +92,11 @@ top: -70px;
 .block {
     display: flex;
     width: 100%;
-    height: 70px;
 }
 
-.text {
-    font-size: 2em;
-    width: 100%;
-}
-
-.text div p{
+.text div p {
     width: calc(100% - 190px);
+    white-space: unset;
 }
 
 .btn-mem>a {
@@ -117,26 +114,25 @@ top: -70px;
     margin-left: -7px;
 }
 
-.btn-mem>a+a {
-}
+.btn-mem>a+a {}
 
 main>s:target~.btn-mem>* {
     background: rgba(255, 255, 255, 0.5);
 }
 
-#s1:target~ .btn-mem>*:nth-child(1) .btn {
+#s1:target~.btn-mem>*:nth-child(1) .btn {
     background: rgba(255, 255, 255, 1);
 }
 
-#s2:target~ .btn-mem>*:nth-child(2) .btn {
+#s2:target~.btn-mem>*:nth-child(2) .btn {
     background: rgba(255, 255, 255, 1);
 }
 
-#s3:target~ .btn-mem>*:nth-child(3) .btn {
+#s3:target~.btn-mem>*:nth-child(3) .btn {
     background: rgba(255, 255, 255, 1);
 }
 
-#s4:target~ .btn-mem>*:nth-child(4) .btn {
+#s4:target~.btn-mem>*:nth-child(4) .btn {
     background: rgba(255, 255, 255, 1);
 }
 
@@ -178,4 +174,23 @@ main>s:target~.btn-mem>* {
 #s4:target~.block .text {
     transform: translateX(-300%);
     -webkit-transform: translateX(-300%);
+}
+
+
+@media (max-width: 767px) {
+.text div p {
+width: 100%;
+}
+
+main{
+    margin-bottom: 100px;
+}
+
+.btn-mem{
+    gap: 9px;
+    height: 172px;
+    margin-top: -60px;
+    justify-content: center;
+}
+
 }
