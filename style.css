@@ -3,19 +3,14 @@
     -webkit-box-sizing: border-box;
 }
 
-html,
-body {
-    height: 100%;
-}
-
 body {
     background-image: url(assets/black-g5fc3a1eaa_1920.jpg);
     background-size: cover;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .h1 {
-    color: black;
+    color: white;
     text-align: center;
 }
 
@@ -25,18 +20,19 @@ body {
     justify-content: flex-end;
     gap: 10px;
 position: relative;
-height: 40px;
-top: -40px;
+height: 70px;
+top: -70px;
 }
 
 .btn {
     cursor: pointer;
-    background: wheat;
+    background: grey;
     transition: color 1s;
     border-radius: 100px;
     border: solid 2px white;
     width: 30px;
     height: 30px;
+    margin-top: 5px;
 }
 
 .btn:hover,
@@ -54,6 +50,7 @@ top: -40px;
     margin: 0 auto;
     width: 60%;
     overflow: hidden;
+    max-width: 600px;
 }
 
 .mem,
@@ -66,7 +63,7 @@ top: -40px;
 
 .mem>*,
 .text>* {
-    font-size: 1rem;
+    font-size: 1.2rem;
     display: inline-block;
     white-space: normal;
     vertical-align: top;
@@ -76,11 +73,14 @@ top: -40px;
     background-size: cover;
 }
 
-.slide {}
+.slide {
+    text-align: center;
+}
 
 .slide img {
     align-content: center;
-    max-height: 300px;
+    max-height: 70vh;
+    width: 100%;
 }
 
 .invisible {
@@ -90,7 +90,7 @@ top: -40px;
 .block {
     display: flex;
     width: 100%;
-    height: 40px;
+    height: 70px;
 }
 
 .text {
@@ -99,45 +99,44 @@ top: -40px;
 }
 
 .text div p{
-    width: calc(100% - 160px);
+    width: calc(100% - 190px);
 }
 
 .btn-mem>a {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 42px;
+    height: 42px;
     line-height: 30px;
     text-decoration: none;
     text-align: center;
     border-radius: 100px;
     border: solid 0px white;
-    background: rgba(255, 255, 255, 1);
     -webkit-transition: 0.3s;
     transition: 0.3s;
     align-self: center;
+    margin-left: -7px;
 }
 
 .btn-mem>a+a {
-    background: rgba(255, 255, 255, 0.5);
 }
 
 main>s:target~.btn-mem>* {
     background: rgba(255, 255, 255, 0.5);
 }
 
-#s1:target~.block .btn-mem>*:nth-child(1) .btn {
+#s1:target~ .btn-mem>*:nth-child(1) .btn {
     background: rgba(255, 255, 255, 1);
 }
 
-#s2:target~.block .btn-mem>*:nth-child(2) .btn {
+#s2:target~ .btn-mem>*:nth-child(2) .btn {
     background: rgba(255, 255, 255, 1);
 }
 
-#s3:target~.block .btn-mem>*:nth-child(3) .btn {
+#s3:target~ .btn-mem>*:nth-child(3) .btn {
     background: rgba(255, 255, 255, 1);
 }
 
-#s4:target~.block .btn-mem>*:nth-child(4) .btn {
+#s4:target~ .btn-mem>*:nth-child(4) .btn {
     background: rgba(255, 255, 255, 1);
 }
 
